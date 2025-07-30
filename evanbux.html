@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evanbux Counter - The Tracksheet</title>
+    <link rel="stylesheet" href="resources/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo-link"><h1 class="logo">The Tracksheet</h1></a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="characters.html" class="nav-link">Characters</a>
+                <a href="banned-topics.html" class="nav-link">Banned Topics</a>
+                <a href="evanbux.html" class="nav-link active">Evanbux Counter</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="counter-container">
+                <h1 class="counter-title">Evanbux Counter</h1>
+                <div class="counter-value" id="counter-display">3</div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Simple script to make the counter value glow/pulse
+        const counter = document.getElementById('counter-display');
+        
+        setInterval(() => {
+            counter.style.textShadow = '0 0 20px #059669, 0 0 40px #059669, 0 0 60px #059669';
+            setTimeout(() => {
+                counter.style.textShadow = 'none';
+            }, 500);
+        }, 2000);
+    </script>
+</body>
+</html> 
